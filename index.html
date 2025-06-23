@@ -4,135 +4,106 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Buraq Society</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-    header {
-      background-color: #001f3f;
-      color: white;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .banner {
-      background-image: url('banner.jpg');
-      background-size: cover;
-      background-position: center;
-      height: 80vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-align: center;
-      font-family: 'Montserrat', sans-serif;
-    }
-    .banner h1 {
-      font-size: 3rem;
-    }
-    .section {
-      padding: 4rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .stats {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-    }
-    .stat {
-      font-size: 2rem;
-      font-weight: bold;
-      color: #001f3f;
-      margin: 1rem;
-      text-align: center;
-    }
-    .footer {
-      background-color: #333;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-    button.cta {
-      background-color: #001f3f;
-      color: white;
-      padding: 1rem 2rem;
-      border: none;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    button.cta:hover {
-      background-color: #003366;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.7/dist/countUp.umd.js"></script>
 </head>
 <body>
-  <header>
-    <div><img src="buraq-logo.png" alt="Buraq Logo" height="40"></div>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#alumni">Alumni & Legacy</a>
-      <a href="#partners">Partners</a>
-      <a href="#faq">FAQ</a>
-      <a href="#voices">Voices</a>
-      <a href="#timeline">Timeline</a>
-    </nav>
-  </header>
-
+  <!-- Full-width Banner -->
   <section class="banner">
-    <div>
-      <h1>Building the Next Generation of Leaders</h1>
-      <p>Inspiring Cadets Across Pakistan</p>
+    <img src="images/banner.jpg" alt="Buraqians in camp" class="banner-img" />
+    <div class="banner-text">
+      <h1>Empowering the Leaders of Tomorrow</h1>
+      <a href="#apply" class="cta-button">Apply Now</a>
     </div>
   </section>
 
-  <section class="section stats">
-    <div class="stat">1000+ Cadets</div>
-    <div class="stat">50+ Cities</div>
-    <div class="stat">10+ Years</div>
+  <!-- Animated Counters -->
+  <section class="stats">
+    <div class="counter" id="cadets">0</div>
+    <p>Cadets Trained</p>
+    <div class="counter" id="years">0</div>
+    <p>Years Running</p>
+    <div class="counter" id="cities">0</div>
+    <p>Cities Impacted</p>
   </section>
 
-  <section class="section">
-    <h2>Why Buraq?</h2>
-    <p><strong>What:</strong> A transformative space camp for youth.</p>
-    <p><strong>How:</strong> Leadership training, mentorship, and hands-on activities.</p>
-    <p><strong>Why:</strong> To empower young leaders for a better tomorrow.</p>
-  </section>
-
-  <section class="section">
-    <h2>Testimonials</h2>
-    <p>"Buraq changed my life. I made lifelong friends and found confidence in myself." – Alumni 2019</p>
-    <p>"A once-in-a-lifetime experience that shaped my worldview." – Alumni 2021</p>
-  </section>
-
-  <section class="section">
-    <h2>Watch the Experience</h2>
-    <video width="100%" controls>
-      <source src="buraq-highlights.mp4" type="video/mp4">
+  <!-- Highlight Video -->
+  <section class="video-section">
+    <video controls autoplay muted>
+      <source src="video/highlight.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </section>
 
-  <footer class="footer">
-    <p>&copy; 2025 Buraq Society | <a href="#contact" style="color:lightgray">Contact Us</a></p>
-    <p>
-      <a href="#" style="color:white; margin: 0 0.5rem;">Facebook</a> |
-      <a href="#" style="color:white; margin: 0 0.5rem;">Instagram</a>
-    </p>
+  <!-- Why Buraq -->
+  <section class="why-buraq">
+    <h2>Why Buraq?</h2>
+    <p>A transformative camp nurturing intellect, leadership, and spirituality in youth.</p>
+    <a href="about.html" class="cta-link">More About the Camps →</a>
+  </section>
+
+  <!-- Testimonials Slider -->
+  <section class="testimonials">
+    <h2>Voices of Buraq</h2>
+    <div class="testimonial-slider">
+      <div class="testimonial active">
+        <p>"Buraq changed how I lead and think." - Alumni A</p>
+      </div>
+      <div class="testimonial">
+        <p>"The camp was truly life-changing." - Alumni B</p>
+      </div>
+      <div class="testimonial">
+        <p>"A brilliant experience for future leaders." - Speaker A</p>
+      </div>
+      <div class="testimonial">
+        <p>"Never felt more inspired." - Alumni C</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Strip -->
+  <section class="cta-strip">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Buraq</a>
+    <a href="alumni.html">Alumni & Legacy</a>
+    <a href="partners.html">Partners</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="faq.html">FAQs</a>
+    <a href="apply.html" id="apply">Apply Now</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>Contact us: info@buraqsociety.org</p>
+      <p>Sponsors: XYZ Foundation, ABC Corp</p>
+      <div class="social-links">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">YouTube</a>
+      </div>
+    </div>
   </footer>
 
+  <script>
+    const counters = {
+      cadets: new countUp.CountUp('cadets', 1200),
+      years: new countUp.CountUp('years', 14),
+      cities: new countUp.CountUp('cities', 10)
+    };
+    Object.values(counters).forEach(counter => counter.start());
+
+    // Simple testimonial slider
+    let index = 0;
+    const testimonials = document.querySelectorAll('.testimonial');
+    setInterval(() => {
+      testimonials[index].classList.remove('active');
+      index = (index + 1) % testimonials.length;
+      testimonials[index].classList.add('active');
+    }, 4000);
+  </script>
 </body>
 </html>
